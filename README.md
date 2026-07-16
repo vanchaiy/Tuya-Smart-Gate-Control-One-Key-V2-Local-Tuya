@@ -1,3 +1,6 @@
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-compatible-41BDF5?logo=homeassistant)](https://www.home-assistant.io/)
+[![Copyright](https://img.shields.io/badge/Copyright-Wanchai%20DIY-blue.svg)]()
+
 # Smart Gate Control (One Key) — คู่มือเชื่อมต่อ Home Assistant ผ่าน LocalTuya
 
 คู่มือการเชื่อมต่อ **Smart Gate Control (One Key)** ซึ่งเป็นอุปกรณ์ Tuya
@@ -14,6 +17,13 @@
 > รุ่นนี้เป็นเวอร์ชัน **One Key** — มี DP `mode` (DP 111) ให้สลับระหว่าง
 > โหมด **fullkey** (แยกปุ่ม เปิด/ปิด/หยุด) กับ **onekey** (ปุ่มเดียวสั่งวน)
 > ดูรายละเอียดในหัวข้อ [7. โหมดควบคุม](#7-โหมดควบคุม-mode)
+
+---
+
+<img src="./SGC.png" alt="SGM-AC" width="855">
+
+| <img src="./Local-Tuya-1.png" alt="SGM-AC" width="400"> | <img src="./Local-Tuya-2.png" alt="SGM-DC" width="400"> |
+|--------------------------|--------------------------|
 
 ---
 
@@ -77,6 +87,8 @@ python -m tinytuya scan
 ---
 
 ## 4. ติดตั้ง xZetsubou/hass-localtuya
+
+<img src="./localtuya.png" alt="SGM-AC" width="100">
 
 1. เปิด **HACS** → เมนู `⋮` (มุมขวาบน) → **Custom repositories**
 2. ใส่ URL: `https://github.com/xZetsubou/hass-localtuya`
@@ -277,3 +289,9 @@ logger:
   และเก็บค่าจริงไว้ใน `secrets.yaml` หรือ environment variable
 - LocalTuya ควบคุมผ่าน LAN โดยตรง แต่ **ไม่ได้หยุด** อุปกรณ์จากการส่งสถานะขึ้น
   Tuya cloud หากต้องการตัด cloud ต้องบล็อกที่ระดับ firewall / DNS
+
+  ## Related
+- [HomeAssistant Gate Control Card](https://github.com/vanchaiy/HA-Gate-Control-Card) - A custom Lovelace card for Home Assistant that provides a visually immersive
+- [HA-SGM-2026 API Examples](https://github.com/vanchaiy/HA-SGM-2026-API-Examples) — HA-SGM-2026 API Examples [ REST API · WebSocket · Webhook · UART ]
+- [Home Assistant](https://www.home-assistant.io/) — open source home automation
+- [สั่งซื้อ Tuya Smart Gate One Key](https://shopee.co.th/product/112616476/43828774864) — Shopee Lazada Tiktok
